@@ -4,10 +4,12 @@
 		{
 			"path": "pages/tabBar/component/component",
 			"style": {
+				"navigationBarShadow":"red",
 				"navigationBarTitleText": "内置组件",
 				"app-plus": {
 					"bounce": "vertical",
 					"titleNView": {
+						
 						"buttons": [{
 							"text": "\ue534",
 							"fontSrc": "/static/uni.ttf",
@@ -23,8 +25,28 @@
 			"style": {
 				"navigationBarTitleText": "接口",
 				"app-plus": {
+					"pullToRefresh": {
+						"support": true,
+						"color": "#ff3333",
+						"style": "circle",
+						"contentdown": {
+							"caption": "下拉可刷新自定义文本"
+						},
+						"contentover": {
+							"caption": "释放可刷新自定义文本"
+						},
+						"contentrefresh": {
+							"caption": "正在刷新自定义文本"
+						}
+					},
 					"titleNView": {
+						"searchInput": {},
+						"type": "transparent",
 						"buttons": [{
+							"float": "left",
+							"type": "home",
+							"select": "true"
+						}, {
 							"text": "\ue534",
 							"fontSrc": "/static/uni.ttf",
 							"fontSize": "22px",
