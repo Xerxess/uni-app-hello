@@ -4,12 +4,12 @@
 		{
 			"path": "pages/tabBar/component/component",
 			"style": {
-				"navigationBarShadow":"red",
+				"navigationBarShadow": "red",
 				"navigationBarTitleText": "内置组件",
 				"app-plus": {
 					"bounce": "vertical",
 					"titleNView": {
-						
+
 						"buttons": [{
 							"text": "\ue534",
 							"fontSrc": "/static/uni.ttf",
@@ -322,7 +322,24 @@
 			"style": {
 				"navigationBarTitleText": "问题反馈"
 			}
+		},
+		// #ifdef APP-PLUS
+		{
+			"path": "pages/guide/guide/guide",
+			"style": {
+				"navigationStyle": "custom",
+				"disableScroll": true,
+				"app-plus": {
+					"titleNView": false,
+					"bounce": "none",
+					"pullToRefresh": {
+						"style": "circle",
+						"offset": "70px"
+					}
+				}
+			}
 		}
+		// #endif
 	],
 	"subPackages": [{
 			"root": "pages/extUI",
@@ -696,6 +713,8 @@
 							"titleNView": {
 								"type": "transparent",
 								"buttons": [{
+									"type": "share"
+								}, {
 									"type": "share"
 								}]
 							}

@@ -78,6 +78,7 @@
 			}
 		},
 		onNavigationBarButtonTap(event) {
+			console.log(event)
 			const buttonIndex = event.index;
 			if (buttonIndex === 0) {
 				// 分享 H5 的页面

@@ -222,10 +222,19 @@
 			goDetailPage(e) {
 				let path = e.url ? e.url : e;
 				let url = ~path.indexOf('platform') ? path : '/pages/template/' + path + '/' + path;
+				var pages = getCurrentPages();
+				console.log(pages.length);
 				uni.navigateTo({
 					url: url
 				});
-				return false;
+				pages = getCurrentPages();
+				console.log(pages.length);
+				// setInterval(()=>{
+				// 	pages = getCurrentPages();
+				// 	console.log(pages.length);
+				// },1000);
+				
+								return false;
 			}
 		}
 	}
